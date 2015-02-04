@@ -1,11 +1,286 @@
 {
   "quizzes":[
-    { "question":"Quest?",
+    { "question":"Welche Vorteile folgen aus der Moeglichkeit, Programme in einem priviligierten (Kernel-), bzw. in einem beschraenkten (User-) Modus ausfuehren zu koennen?",
       "answers":[
-       {"answer":"Answer1"},
-       {"answer":"Answer2"},
-       {"answer":"Answer3", "correct":true},
-       {"answer":"Answer4"}
+       {"answer":"Sicherheit und Einfachheit. Wie oben, mit dem Zusatz, dass die Programmierung von Betriebssystemen vereinfacht wird."},
+       {"answer":"Einfachheit. Die Trennung in User- und Kernelmodus bringt keine Sicherheit, aber vereinfacht die Implementierung von Betriebssystemstrukturen signifikant."},
+       {"answer":"Sicherheit. Die Ausführung von kritischem Code (Zugriffe auf Speicherinhalte, Geräte, etc.) wird nur aus vertrauenswürdiger Quelle (dem Betriebssystem) gestattet.", "correct":true},
+       {"answer":"Performance. Der einzige Vorteil liegt in der Geschwindigkeit der Code-Ausführung, da durch die Hardwareunterstützung zwei Threads parallel laufen können. "}
+      ]
+    },
+    { "question":"Was sind Systemaufrufe (englisch: System Calls)?",
+      "answers":[
+       {"answer":"Alle Programme, die vom Betriebssystem ausgeführt werden."},
+       {"answer":"Alle Betriebssystemprogramme."},
+       {"answer":"Schnittstellen in das Betriebssystem für Benutzerprogramme.", "correct":true},
+       {"answer":"Funktionen des Betriebssystems für den Zugriff auf Hardwarekomponenten. "}
+      ]
+    },
+    { "question":"Was ist ein Interrupt?",
+      "answers":[
+       {"answer":"Eine Störung im Betriebssystemablauf. Beispiel: Division durch Null."},
+       {"answer":"Ein Signal von Hardwarekomponenten. Beispiel: Leseoperation beendet.", "correct":true},
+       {"answer":"Ein Signal vom Betriebssystem. Beispiel: Signal „SIGKILL“ an einen Prozess"}
+      ]
+    },
+    { "question":"Die Strategie, lauffähige Prozesse zeitweilig aufzuhalten wird bezeichnet als:",
+      "answers":[
+       {"answer":"Nicht-Präemptives Scheduling"},
+       {"answer":"Präemptives Scheduling", "correct":true},
+       {"answer":"Shortest Job First"},
+       {"answer":"First Come First Serve"},
+       {"answer":"Etwas anderes"}
+      ]
+    },
+    { "question":"„fork“ bewirkt:",
+      "answers":[
+       {"answer":"Kontextwechsel auf einen neuen Prozess"},
+       {"answer":"Erschaffung eines neues Prozesses", "correct":true},
+       {"answer":"Erschaffung eines neues Threads"},
+       {"answer":"Erhöhung der Prozesspriorität"},
+       {"answer":"Etwas anderes."}
+      ]
+    },
+    { "question":"Interprozesskommunikation ... ",
+      "answers":[
+       {"answer":"... braucht jeder Prozess"},
+       {"answer":"... wird normalerweise über Festplatten gemacht"},
+       {"answer":"... ist nie nötig"},
+       {"answer":"... erlaubt Prozessen ihre Aktivitäten abzustimmen", "correct":true}
+      ]
+    },
+    { "question":"Der FCFS-Algorithmus ...",
+      "answers":[
+       {"answer":"... führt den Prozess aus, der zuletzt in die Warteschlange kam"},
+       {"answer":"... führt den Prozess aus, der zuerst in die Warteschlange kam", "correct":true},
+       {"answer":"... führt den Prozess aus, der am Längsten in der Wartschlange war"},
+       {"answer":"... führt den Prozess aus, der den kleinsten CPU-burst hat"}
+      ]
+    },
+    { "question":"Die Lokalitätseigenschaft bildet die Basis für",
+      "answers":[
+       {"answer":"Virtuellen Speicher"},
+       {"answer":"Cache-Speicher", "correct":true},
+       {"answer":"in die CPU integrierte MMU"}
+      ]
+    },
+    { "question":"Ein nicht-relozierbares Programm ...",
+      "answers":[
+       {"answer":"... kann an beliebigen Stellen im Speicher ausgeführt werden. "},
+       {"answer":"... kann nicht an beliebigen Stellen im Speicher ausgeführt werden. ", "correct":true},
+       {"answer":"... kein selbst die Adressbindung vornehmen."},
+       {"answer":"Etwas anderes."}
+      ]
+    },
+    { "question":"Externe Fragmentierung ist eine Eigenschaft von",
+      "answers":[
+       {"answer":"Swapping"},
+       {"answer":"Segmentation", "correct":true},
+       {"answer":"Paging"},
+       {"answer":"Mehreren zusammenhängenden Prozessadressräumen"},
+       {"answer":"Etwas anderes"}
+      ]
+    },
+    { "question":"Der Startwert für eine Semaphore die nur einem Prozess den Zugriff auf einen kritischen Abschnitt erlaubt hat den Startwert",
+      "answers":[
+       {"answer":"0"},
+       {"answer":"1", "correct":true},
+       {"answer":"2"},
+       {"answer":"42"},
+       {"answer":"Einen anderen."}
+      ]
+    },
+    { "question":"Ein Seitenfehler („Page Fault“) ist ...",
+      "answers":[
+       {"answer":"... ein Anzeigefehler auf einer Webseite"},
+       {"answer":"... wird normalerweise über Festplatten gemacht"},
+       {"answer":"... ein Fehler, der auftritt, wenn die angeforderte Seite nicht zum aufrufenden Prozess gehört."},
+       {"answer":"... ein Fehler, der auftritt, wenn die angeforderte Seite nicht im Speicher liegt", "correct":true}
+      ]
+    },
+    { "question":"Welche Aussage ist falsch?",
+      "answers":[
+       {"answer":"Eine kleine Seitengröße (page size) ergibt große Seitentabellen (page table)"},
+       {"answer":"Interne Fragmentierung ist größer mit kleinen Seiten. ", "correct":true},
+       {"answer":"I/O-Transfers sind effizienter mit großen Seiten."},
+       {"answer":"Eine große Seitengröße bewirkt, dass Instruktionen und Daten, die nicht gebraucht werden, in den Hauptspeicher geladen werden. "}
+      ]
+    },
+    { "question":"Das Produzent/Verbraucher-Problem kann gelöst werden mit:",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"Semaphoren"},
+       {"answer":"Monitoren"},
+       {"answer":"Event-Zählern"},
+       {"answer":"Allem obigen.", "correct":true},
+       {"answer":"Etwas anderem."}
+      ]
+    },
+    { "question":"Was macht die CPU nach dem Empfang eines Interrupts?",
+      "answers":[
+       {"answer":"Hält für eine bestimmte Zeitdauer an. "},
+       {"answer":"Übergibt Kontrolle über den Datenbus an das unterbrechende Gerät."},
+       {"answer":"Führt die Interrupt-Service-Routine (ISR) aus."},
+       {"answer":"Beendet die letzte Instruktion und führt die ISR aus.", "correct":true}
+      ]
+    },
+    { "question":"Wie nennt man es, wenn das Betriebssystem mehrere Programme nebenläufig ausführt, in dem ein von einem zum anderen schaltet?",
+      "answers":[
+       {"answer":"Partitionierung"},
+       {"answer":"Multitasking", "correct":true},
+       {"answer":"Windowing"},
+       {"answer":"Paging"},
+       {"answer":"Hyperthreading"}
+      ]
+    },
+    { "question":"Welches Problem ist durch Dijkstra’s Bankiersalgorithmus lösbar?",
+      "answers":[
+       {"answer":"Gegenseitiger Ausschluss"},
+       {"answer":"Deadlock-Verhinderung", "correct":true},
+       {"answer":"Deadlock-Lösung"},
+       {"answer":"Cache-Kohärenz"}
+      ]
+    },
+    { "question":"Der Dispatcher ... ",
+      "answers":[
+       {"answer":"... veranlasst die Ausführung eines ausgewählten Prozesses", "correct":true},
+       {"answer":"... setzt Prozesse in die I/O-Warteschlange"},
+       {"answer":"... ist immer klein und einfach"},
+       {"answer":"... verändert nie Prozess-Prioritäten"}
+      ]
+    },
+    { "question":"Wenn der logische Adressraum eines Programms 16 bits breit ist und die Seitengröße (page size) 512 bytes, dann ist die Anzahl der Seiten im logischen Adressraum",
+      "answers":[
+       {"answer":"16"},
+       {"answer":"128", "correct":true},
+       {"answer":"32"},
+       {"answer":"64"},
+       {"answer":"Ungueltig."}
+      ]
+    },
+    { "question":"Der SJF-Algorithmus führt den Job zuerst aus, der ...",
+      "answers":[
+       {"answer":"... zuletzt die Warteschlange betreten hat"},
+       {"answer":"... zuerst die Warteschlange betreten hat"},
+       {"answer":"... am längsten in der Warteschlange war"},
+       {"answer":"... den kürzesten CPU-burst hat", "correct":true}
+      ]
+    },
+    { "question":"Mit welcher Speicherplatzierungsstrategie wird ein Programm in das größte Speicherloch geladen?",
+      "answers":[
+       {"answer":"Best Fit"},
+       {"answer":"Worst Fit", "correct":true},
+       {"answer":"First Fit"},
+       {"answer":"McFit"}
+      ]
+    },
+    { "question":"Welche Aussage ist falsch?",
+      "answers":[
+       {"answer":"Segmentation ergibt externe Fragmentierung."},
+       {"answer":"Logischer Speicher wird nur in Mehrbenutzersystemen eingesetzt.", "correct":true},
+       {"answer":"Paging ergibt interne Fragmentierung."},
+       {"answer":"Segmentierung und Paging können parallele Strategien sein. "}
+      ]
+    },
+    { "question":"Scheduling ist ...",
+      "answers":[
+       {"answer":"... Prozessen erlauben, den Prozessor zu nutzen.", "correct":true},
+       {"answer":"... unabhängig von Leistungsüberlegungen"},
+       {"answer":"... unnötig auf Einprozessorsystemen. "},
+       {"answer":"... immer dasselbe, unabhängig von der Nutzungsart des Systems. "}
+      ]
+    },
+    { "question":"Der Algorithmus von Dekker löst das Kritischer-Abschnitt-Problem für wieviel Prozesse?",
+      "answers":[
+       {"answer":"1"},
+       {"answer":"2", "correct":true},
+       {"answer":"2^i( i = 2 ... Inf)"},
+       {"answer":"3"}
+      ]
+    },
+    { "question":"Round-Robin-Scheduling ...",
+      "answers":[
+       {"answer":"... erlaubt interaktiven Prozessen schnellen Zugriff auf den Prozessor"},
+       {"answer":"... gibt jedem Prozess das selbe Zugriffsquantum", "correct":true},
+       {"answer":"... ist schwierig zu implementieren"},
+       {"answer":"... gibt CPU-lastigen Prozessen mehr Zeit auf dem Prozessor"}
+      ]
+    },
+    { "question":"Vier notwendige Bedingungen für einen Deadlock sind: Gegenseitiger Ausschluss, Zirkuläres Warten und",
+      "answers":[
+       {"answer":"„Halten und Warten“ und „Deadlock-Vermeidung“"},
+       {"answer":"„Deadlock-Vermeidung“ und „Race-Condition“"},
+       {"answer":"Event-Zählern"},
+       {"answer":"„Halten und Warten“ und „Kein Unterbrechen“", "correct":true},
+       {"answer":"„Buffer Overflow“ und „Stack Overflow“"}
+      ]
+    },
+    { "question":"Ein Prozess der im Zustand “Blocked” ist ...",
+      "answers":[
+       {"answer":"... ist ausführbar"},
+       {"answer":"... wird ausgeführt"},
+       {"answer":"... muss noch in die „Running“-Warteschlange eingeführt werden"},
+       {"answer":"... wartet auf eine zeitweise nicht verfügbare Ressource. ", "correct":true}
+      ]
+    },
+    { "question":"Unter UNIX kann ein Prozess folgenden Zustand haben:",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"„Running“"},
+       {"answer":"„Orphan“"},
+       {"answer":"„Sleeping“"},
+       {"answer":"„Zombie“"},
+       {"answer":"Alles obige.", "correct":true}
+      ]
+    },
+    { "question":"Spinlocks sind:",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"eine CPU-hungrige Lösung des Kritischer-Abschnitt-Problems "},
+       {"answer":"Sperren, die keine Zeit durch Kontextwechsel verschwenden"},
+       {"answer":"Sperren, die besser für Multiprozessorsysteme geeignet sind"},
+       {"answer":"alle obigen Antworten treffen zu", "correct":true},
+       {"answer":"keine Antwort trifft zu"}
+      ]
+    },
+    { "question":"Der Prozesskontrollblock (PCB) enthält ... ",
+      "answers":[
+       {"answer":"... Speicherabbilder von Prozessen"},
+       {"answer":"... die Prozesstabelle"},
+       {"answer":"... Informationen zum Zustand eines Prozesses, der CPU-Register, geöffnete Geräte und Dateien", "correct":true},
+       {"answer":"Alle Antworten treffen zu."}
+      ]
+    },
+    { "question":"Ein Thread ...",
+      "answers":[
+       {"answer":"... ist ein Programm vor der Ausführung"},
+       {"answer":"... ist ein „leicht-gewichtiger“ Prozess", "correct":true},
+       {"answer":"... läuft schneller als ein Prozess"},
+       {"answer":"Alle Antworten treffen zu. "}
+      ]
+    },
+    { "question":"Im Multi-Level-Feedback-Scheduling ...",
+      "answers":[
+       {"answer":"… können Prozesse zwischen verschieden klassifizierten Ready-Queues wandern", "correct":true},
+       {"answer":"... können Prozesse in verschiedene Warteschlangen einsortiert werden. Diese Sortierung bleibt fest über der Zeit."},
+       {"answer":"... wird immer der erste Prozess aus einer zufällig selektierten Warteschlange gewählt."}
+      ]
+    },
+    { "question":"Jeder Prozess hat seine(n) eigenen ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"Adressraum"},
+       {"answer":"Globale Variablen"},
+       {"answer":"Geöffnete Dateien"},
+       {"answer":"Signal-Handler"},
+       {"answer":"Alles obige.", "correct":true}
+      ]
+    },
+    { "question":"Welches Problem ergibt sich wenn in einem Mehrprozessorsystem ein Prozess von einer CPU auf eine andere wechselt?",
+      "answers":[
+       {"answer":"Der Kontext-Switch dauert länger aufgrund der Prozessoraffinität."},
+       {"answer":"Der Cache des zweiten Prozessors hat potenziell nicht zum Prozess passende Inhalte. Folgende Speicherzugriffe dauern länger.", "correct":true},
+       {"answer":"Es gibt kein Problem."}
       ]
     }
   ]
