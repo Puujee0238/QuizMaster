@@ -18,6 +18,7 @@ package de.zell.quiz.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Menu;
 import de.zell.android.util.PropertiesProvider;
 import de.zell.android.util.activities.MainNavigationActivity;
 import de.zell.android.util.json.JSONUnmarshaller;
@@ -105,4 +106,11 @@ public class QuizMainActivity extends MainNavigationActivity {
   @Override
   protected void startSearch(String query) {
   }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    return false;
+  }
+  
+  
 }
