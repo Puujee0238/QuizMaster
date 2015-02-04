@@ -1,0 +1,12 @@
+{
+  "quizzes":[
+    { "question":"Quest?",
+      "answers":[
+       {"answer":"Answer1"},
+       {"answer":"Answer2"},
+       {"answer":"Answer3", "correct":true},
+       {"answer":"Answer4"}
+      ]
+    }
+  ]
+}
