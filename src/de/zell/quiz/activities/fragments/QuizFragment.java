@@ -27,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import de.zell.quiz.activities.R;
 import de.zell.quiz.entities.Answer;
@@ -42,8 +43,8 @@ public class QuizFragment extends Fragment {
 
   public static final String ARG_QUIZ = "quiz";
   private static final String TAG_QUIZ = "tag.quiz";
-  private static final Float QUIZ_HEAD_TEXT_SIZE = 32f;
-  private static final Float QUIZ_BODY_TEXT_SIZE = 18f;
+  private static final Float QUIZ_HEAD_TEXT_SIZE = 18f;
+  private static final Float QUIZ_BODY_TEXT_SIZE = 12f;
   private static final Integer QUIZ_CONTENT_MARGIN = 30;
   
   private Quiz q;
@@ -79,6 +80,9 @@ public class QuizFragment extends Fragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     Context ctx = getActivity();
+    ScrollView root = new ScrollView(ctx);
+    root.setLayoutParams(new ScrollView.LayoutParams(ScrollView.LayoutParams.MATCH_PARENT,
+                                        ScrollView.LayoutParams.MATCH_PARENT));
     final LinearLayout ll = new LinearLayout(ctx);
     ll.setOrientation(LinearLayout.VERTICAL);
 
@@ -88,7 +92,8 @@ public class QuizFragment extends Fragment {
       content = createQuestionContent(ctx);
       ll.addView(content);
     }
-    return ll;
+    root.addView(ll);
+    return root;
   }
 
   protected View createQuestionHead(Context ctx) {
