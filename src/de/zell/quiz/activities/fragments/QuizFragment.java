@@ -75,6 +75,12 @@ public class QuizFragment extends Fragment {
         q = (Quiz) savedInstanceState.getSerializable(ARG_QUIZ);
       }
     }
+    
+    
+    List<Answer> answers = q.getAnswers();
+    if (q.getNotShuffle() != null && !q.getNotShuffle()) {
+      Collections.shuffle(answers);
+    }
   }
 
   @Override
@@ -117,8 +123,6 @@ public class QuizFragment extends Fragment {
 
   protected View createQuestionContent(Context ctx) {
     List<Answer> answers = q.getAnswers();
-    if (q.getNotShuffle() != null && !q.getNotShuffle())
-      Collections.shuffle(answers);
     LinearLayout ll = new LinearLayout(ctx);
     ll.setOrientation(LinearLayout.VERTICAL);
     LayoutParams llParams = new LayoutParams(LayoutParams.MATCH_PARENT,
