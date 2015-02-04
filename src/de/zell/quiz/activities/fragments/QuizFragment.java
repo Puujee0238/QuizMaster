@@ -18,6 +18,7 @@ import android.widget.Toast;
 import de.zell.quiz.activities.R;
 import de.zell.quiz.entities.Answer;
 import de.zell.quiz.entities.Quiz;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -98,6 +99,7 @@ public class QuizFragment extends Fragment {
 
   protected View createQuestionContent(Context ctx) {
     List<Answer> answers = q.getAnswers();
+    Collections.shuffle(answers);
     LinearLayout ll = new LinearLayout(ctx);
     ll.setOrientation(LinearLayout.VERTICAL);
     LayoutParams llParams = new LayoutParams(LayoutParams.MATCH_PARENT,
@@ -129,14 +131,12 @@ public class QuizFragment extends Fragment {
     return new RadioGroup.OnCheckedChangeListener() {
 
       public void onCheckedChanged(RadioGroup arg0, int arg1) {
-        if (arg1 != -1) {
+        if (arg1 >= 0) {
           Answer a = q.getAnswers().get(arg1);
           if (a.getCorrect() != null && a.getCorrect()) {
             content.setBackgroundColor(getResources().getColor(R.color.green));
-            Toast.makeText(getActivity(), "Correct!!!!", Toast.LENGTH_LONG).show();
           } else {
             content.setBackgroundColor(getResources().getColor(R.color.red));
-            Toast.makeText(getActivity(), "Wrong-.-" + arg1, Toast.LENGTH_SHORT).show();
           }
         }
       }
