@@ -22,6 +22,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import de.zell.android.util.fragments.EntityViewPagerFragment;
 import de.zell.quiz.entities.QuizList;
+import java.util.Collections;
 
 /**
  *
@@ -44,6 +45,7 @@ public class QuizViewPagerFragment extends EntityViewPagerFragment {
   @Override
   protected void extractEntityInformation() {
     list = ((QuizList) entity);
+    list.shuffle();
   }
   
   

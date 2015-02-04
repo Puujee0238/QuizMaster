@@ -19,6 +19,7 @@ package de.zell.quiz.entities;
 import de.zell.android.util.db.Entity;
 import de.zell.android.util.json.JSONElement;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -60,5 +61,10 @@ public class QuizList implements Entity<Void> {
 
   public void add(Quiz q) {
     quizzes.add(q);
+  }
+  
+  public void shuffle() {
+    if (quizzes != null)
+      Collections.shuffle(quizzes);
   }
 }
