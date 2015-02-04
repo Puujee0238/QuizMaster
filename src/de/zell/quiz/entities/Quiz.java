@@ -14,10 +14,13 @@ public class Quiz implements Entity<String> {
   
   @JSONElement(name = "question")
   private String question;
+  @JSONElement(name = "notShuffle")
+  private Boolean notShuffle;
   @JSONElement(name = "answers")
   private List<Answer> answers;
 
   public Quiz() {
+    this.notShuffle = false;
   }
 
   public String getID() {
@@ -42,6 +45,14 @@ public class Quiz implements Entity<String> {
 
   public void setAnswers(List<Answer> answers) {
     this.answers = answers;
+  }
+
+  public Boolean getNotShuffle() {
+    return notShuffle;
+  }
+
+  public void setNotShuffle(Boolean notShuffle) {
+    this.notShuffle = notShuffle;
   }
   
 }
