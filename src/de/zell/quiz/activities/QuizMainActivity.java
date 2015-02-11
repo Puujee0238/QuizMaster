@@ -54,14 +54,14 @@ public class QuizMainActivity extends MainNavigationActivity {
   }
 
   public static final Integer QUIZ_1_ID = R.raw.quiz1;
-  public static final Integer QUIZ_2_ID = 1;
+  public static final Integer QUIZ_2_ID = R.raw.quiz2;
   public static final String QUIZ_1_NAME = "Quiz1";
   public static final String QUIZ_2_NAME = "Quiz2";
   /**
    * The available fragments which can be selected, the names are shown in the
    * left menu of the navigation drawer.
    */
-  public static final String[] FRAGMENT_NAMES = {QUIZ_1_NAME};
+  public static final String[] FRAGMENT_NAMES = {QUIZ_1_NAME, QUIZ_2_NAME};
 
   public Fragment createQuizFragment(Integer quiz) {
     Bundle b = new Bundle();
@@ -94,7 +94,7 @@ public class QuizMainActivity extends MainNavigationActivity {
 
   @Override
   protected Fragment[] getNavigationFragments() {
-    final Fragment[] FRAGMENTS = {createQuizFragment(QUIZ_1_ID)};
+    final Fragment[] FRAGMENTS = {createQuizFragment(QUIZ_1_ID), createQuizFragment(QUIZ_2_ID)};
     return FRAGMENTS;
   }
 

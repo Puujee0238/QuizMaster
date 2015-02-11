@@ -1,0 +1,308 @@
+{
+  "quizzes":[
+    { "question":"Was löst einen Software-Interrupt aus?",
+      "answers":[
+       {"answer":"Die CPU", "correct":true},
+       {"answer":"Der Betriebssystem-Kernel"},
+       {"answer":"Hardwaregeräte"},
+       {"answer":"Userprogramme"}
+      ]
+    },
+    { "question":"Was ist Thrashing?",
+      "answers":[
+       {"answer":"Ein Prozess verwendet viel Zeit für die Ausführung."},
+       {"answer":"Ein Prozess verwendet viel Zeit für Paging. ", "correct":true},
+       {"answer":"Mit dem Mauszeiger ein Programmsymbol in den Papierkorb ziehen. "},
+       {"answer":"Ein Prozess hat keinen Speicher zugeteilt bekommen. "}
+      ]
+    },
+    { "question":"Für einen Prozess sei die Abfolge seiner Page-Zugriffe\n( älter ... ) 2 6 1 5 7 7 7 7 5 1 6 2 3 4 1 2 3 4 4 4 3 4 3 4 4 4 1 3 2 3 ( ... neuer )\nWas ist das Working Set an Zeitpunkt t = 11 für ein delta = 10?",
+      "answers":[
+       {"answer":"{6,2,3,4,1,2,3,4,3,4}"},
+       {"answer":"{6,2,3,4,1}"},
+       {"answer":"{1, 5, 6, 7}", "correct":true},
+       {"answer":"{6, 1, 5, 7, 7, 7, 7, 5, 1, 6}}"}
+      ]
+    },
+    { "question":"Für einen Prozess sei die Sequenz seiner Page-Zugriffe 1 2 3 4 2 1 5 6 2 1 2 3 7 6 3 2 1 2 3 6. Für den LRU-Page-Replacement-Algorithmus mit vier Frames ist die Anzahl der Page-Faults:",
+      "answers":[
+       {"answer":"10"},
+       {"answer":"14", "correct":true},
+       {"answer":"8"},
+       {"answer":"11"}
+      ]
+    },
+    { "question":"Bei welchen Page-Replacement-Algorithmen kann Belady’s Anomalie auftreten?",
+      "answers":[
+       {"answer":"LRU"},
+       {"answer":"OPT und FIFO"},
+       {"answer":"FIFO", "correct":true},
+       {"answer":"LRU und LFU"}
+      ]
+    },
+    { "question":"Was ist Belady’s Anomalie?",
+      "answers":[
+       {"answer":"Die Anzahl der Page Faults steigt bei steigender Zahl von Frames. ", "correct":true},
+       {"answer":"Die Anzahl der Page Faults steigt bei fallender Zahl von Frames."},
+       {"answer":"Die Anzahl der Page Faults sind links-schief normal-verteilt. "},
+       {"answer":"Gegeben eine bestimmte Page-Zugriffssequenz, und eine bestimmte Anzahl von Frames , so existiert ein Page-Replacement-Algorithmus mit dem nie Page-Faults auftreten."}
+      ]
+    },
+    { "question":"Das virtuelle Dateisystem (VFS) unter Unix...",
+      "answers":[
+       {"answer":"...verwaltet virtuelle Dateien. "},
+       {"answer":"... abstrahiert Dateizugriffsoperationen für verschiedene unterliegende Dateisysteme.", "correct":true},
+       {"answer":"... ist Teil von NFS (network file system)"},
+       {"answer":"... ist verantwortlich für das Mounting von entfernten Dateisystemen. "},
+       {"answer":"Alle Antworten sind korrekt. "}
+      ]
+    },
+    { "question":"Eine (externe) Fragmentierung des Dateisystems ist eingetreten, wenn ...",
+      "answers":[
+       {"answer":"... Dateien oder freier Speicherplatz nicht zusammenhängend auf dem Datenträger vorliegen.", "correct":true},
+       {"answer":"... es keine interne Fragmentierung gibt. "},
+       {"answer":"... der Bootprozess sich signifikant verlangsamt"}
+      ]
+    },
+    { "question":"Das Betriebssystem verwaltet eine System-weite Tabelle, in die geöffnete Dateien eingetragen werden. Diese Tabelle heißt:",
+      "answers":[
+       {"answer":"open-file table", "correct":true},
+       {"answer":"file-table"},
+       {"answer":"directory"},
+       {"answer":"system-table"}
+      ]
+    },
+    { "question":"Unter Unix gibt der Systemaufruf „open“ was genau zurück:",
+      "answers":[
+       {"answer":"Zeiger auf den entsprechenden Eintrag im Prozess-weiten open-file table", "correct":true},
+       {"answer":"Zeiger auf den entsprechenden Eintrag im file-table"},
+       {"answer":"Zeiger auf ein File-Deskriptor-Objekt im Kernel-Space"},
+       {"answer":"Etwas anderes"}
+      ]
+    },
+    { "question":"Das Verzeichnis des Dateisystems ist ...",
+      "answers":[
+       {"answer":"... eine Datenstruktur, die Dateinamen in Verzeichniseinträge übersetzt", "correct":true},
+       {"answer":"... eine Datenstruktur, die Festplattenpartitionen verwaltet. "},
+       {"answer":"... eine Liste von freien Swap-Speicherbereichen. "},
+       {"answer":"Etwas anderes."}
+      ]
+    },
+    { "question":"Je größer die Blockgröße des Dateisystems, desto __________ die interne Fragmentierung.",
+      "answers":[
+       {"answer":"größer", "correct":true},
+       {"answer":"kleiner"},
+       {"answer":"hat keinen Einfluss!"},
+       {"answer":"kommt auf das Dateisystem an. "}
+      ]
+    },
+    { "question":"Zu Eingabe/Ausgabe-Hardware zählt man",
+      "answers":[
+       {"answer":"Bus"},
+       {"answer":"Kontroller"},
+       {"answer":"I/O Ports und deren Register"},
+       {"answer":"Alles", "correct":true}
+      ]
+    },
+    { "question":"Memory-Mapped I/O und __________________ sind zwei generelle Methoden mit Geräten zu kommunizieren.",
+      "answers":[
+       {"answer":"Memory-Mapped Files"},
+       {"answer":"Port-Mapped I/O", "correct":true},
+       {"answer":"Interrupt-Driven IO"},
+       {"answer":"Etwas anderes."}
+      ]
+    },
+    { "question":"Das DATA-IN-Register ...",
+      "answers":[
+       {"answer":"... wird vom Host gelesen um Eingaben zu erhalten.", "correct":true},
+       {"answer":"... wird vom Host geschrieben, um Eingaben in den Gerätekontroller zu veranlassen. "},
+       {"answer":"... wird vom Host geschrieben, nur um Befehle an den Gerätekontroller zu senden."},
+       {"answer":"... kann – je nach Konfiguration des Kontrollers - variabel verwendet werden."}
+      ]
+    },
+    { "question":"Wenn Geräteregister in den Hauptspeicher gemapped werden, ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"... dann heißt das Memory-Mapped I/O."},
+       {"answer":"... dann muss das der Kontroller unterstützen. ", "correct":true},
+       {"answer":"... kann der Zugriff auf die Geräte ohne Assembler-Befehle programmiert werden"},
+       {"answer":"Allem obigen. "},
+       {"answer":"Etwas anderem. "}
+      ]
+    },
+    { "question":"Mehr RAM in den Rechner bauen, macht diesen üblicherweise performanter, weil ... ",
+      "answers":[
+       {"answer":"... das System nun auch mehr virtuellen Speicher hat. "},
+       {"answer":"... paradoxerweise die Zugriffsgeschwindigkeit des RAMs mit seiner Größe steigt. "},
+       {"answer":"... weniger Page-Faults auftreten. ", "correct":true}
+      ]
+    },
+    { "question":". Betrachten wir eine Speicherseite (Page) , die zum Programmstart geladen wurde und eine Variable beinhaltet, die oft verwendet wird. Jetzt wird die Page leider entfernt. Welcher Page-ReplacementAlgorithmus ist vermutlich dafür verantwortlich?",
+      "answers":[
+       {"answer":"LRU"},
+       {"answer":"LFU"},
+       {"answer":"FIFO", "correct":true},
+       {"answer":"UFO"}
+      ]
+    },
+    { "question":"Spinlocks sind:",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"eine CPU-hungrige Lösung des Kritischer-Abschnitt-Problems "},
+       {"answer":"Sperren, die keine Zeit durch Kontextwechsel verschwenden"},
+       {"answer":"Sperren, die besser für Multiprozessorsysteme geeignet sind"},
+       {"answer":"alle obigen Antworten treffen zu", "correct":true},
+       {"answer":"keine Antwort trifft zu"}
+      ]
+    },
+    { "question":"Wenn das modified-Bit einer Page gesetzt wurde, dann ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"... ist die Seite modifiziert worden, seitdem es zuletzt von der Platte geladen wurde."},
+       {"answer":"... nennt man die Seite auch „dirty“"},
+       {"answer":"... ist die Seite nicht modifiziert worden"},
+       {"answer":"Die beiden ersten Antworten. ", "correct":true},
+       {"answer":"Antwort 2 und 3"}
+      ]
+    },
+    { "question":"Der optimale Page-Replacement-Algorithmus “OPT” ...",
+      "answers":[
+       {"answer":"... ersetzt die Seite, die lange nicht benutzt wurde."},
+       {"answer":"... ersetzt die Seite, die zuletzt benutzt wurde. "},
+       {"answer":"... ersetzt die Seite, die lange nicht benutzt werden wird. ", "correct":true},
+       {"answer":"... ist in Linux ab Kernel 2.6 implementiert. "},
+       {"answer":"Antwort 3 und 4."}
+      ]
+    },
+    { "question":"Jeder Prozess hat seine(n) eigenen ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"Adressraum "},
+       {"answer":"Globale Variablen"},
+       {"answer":"Geöffnete Dateien"},
+       {"answer":"Signal-Handler"},
+       {"answer":"Alles obige", "correct":true}
+      ]
+    },
+    { "question":"Welches Dateisystem benutzt KEIN Journaling?",
+      "answers":[
+       {"answer":"ext2", "correct":true},
+       {"answer":"ext3"},
+       {"answer":"ext4"},
+       {"answer":"Antwort 1 und 2"}
+      ]
+    },
+    { "question":"Wenn eine Page-Nummer nicht im translation lookaside buffer gefunden werden konnte, heißt das ",
+      "answers":[
+       {"answer":"...TLB miss", "correct":true},
+       {"answer":"...TLB hit"},
+       {"answer":"...Buffer miss"},
+       {"answer":"...TLMist"}
+      ]
+    },
+    { "question":"Im Multilevel Feedback Queue Scheduling ..",
+      "answers":[
+       {"answer":"...können Prozesse zwischen verschieden klassifizierten Ready-Queues wandern", "correct":true},
+       {"answer":"... können Prozesse in verschiedene Warteschlangen einsortiert werden. Diese Sortierung bleibt fest über der Zeit."},
+       {"answer":"... wird immer der erste Prozess aus einer zufällig selektierten Warteschlange gewählt."}
+      ]
+    },
+    { "question":"Die TLB hit ratio ist ...",
+      "answers":[
+       {"answer":"... das Verhältnis der Anfragen, die im TLB nicht gefunden werden konnten zur Gesamtzahl der Anfragen."},
+       {"answer":"... das Verhältnis der Anfragen, die im TLB gefunden werden konnte zur Anzahl der Anfragen, die nicht gefunden werden konnten."},
+       {"answer":"... das Verhältnis der Anfragen, die im TLB beantwortet werden konnten zur Gesamtzahl der Anfragen. ", "correct":true},
+       {"answer":"Etwas anderes. "}
+      ]
+    },
+    { "question":"Wenn das valid/invalid-Bit einer Page gesetzt ist (auf „valid“), bedeutet dies, dass ...",
+      "answers":[
+       {"answer":"... die Seite sich im TLB befindet."},
+       {"answer":"... die Seite valide Daten beinhaltet (CRC check gab true zurück). "},
+       {"answer":"... die Seite dem logischen Adressraum des Prozesses zugeordnet ist. ", "correct":true},
+       {"answer":"... die Seite sich im TLB befindet, aber nicht in einem physischen Frame. "}
+      ]
+    },
+    { "question":"Bei einem großen logischen Adressraum (z.B. 64 Bit Adressbreite), bietet es sich an ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"... von Paging abzusehen. "},
+       {"answer":"... hierarchisch zu pagen. "},
+       {"answer":"... die Page-Tabelle selbst zu pagen."},
+       {"answer":"Antwort 2 und 3. "}
+      ]
+    },
+    { "question":"Eine Speicheradresse, die von der CPU generiert wird besteht aus zwei Teilen:",
+      "answers":[
+       {"answer":"Frame-Index und Frame-Offset"},
+       {"answer":"Page-Nummer und Page-Offset", "correct":true},
+       {"answer":"Frame-Index und Page-Offset"},
+       {"answer":"Sie besteht aus drei Teilen: Page-Nummer, Page-Offset und einem extra-Bit für TLB-Zugriffe"}
+      ]
+    },
+    { "question":"Paging leidet an:",
+      "answers":[
+       {"answer":"interner Fragmentierung", "correct":true},
+       {"answer":"externer Fragmentierung"},
+       {"answer":"interner und externer Fragmentierung"},
+       {"answer":"intermediärer Fragmentierung"}
+      ]
+    },
+    { "question":" Vier notwendige Bedingungen für einen Deadlock sind: Gegenseitiger Ausschluss, Zirkuläres Warten und ",
+      "answers":[
+       {"answer":"„Halten und Warten“ und „Kein Unterbrechen“", "correct":true},
+       {"answer":"„Halten und Warten“ und „Deadlock-Vermeidung“"},
+       {"answer":"„Deadlock-Vermeidung“ und „Race-Condition“"},
+       {"answer":"Buffer Overflow“ und „Stack Overflow“"}
+      ]
+    },
+    { "question":" Ein Prozess der im Zustand “Blocked” ist ..",
+      "answers":[
+       {"answer":"... ist ausführbar"},
+       {"answer":"... wird ausgeführt"},
+       {"answer":"... muss noch in die „Running“-Warteschlange eingeführt werden"},
+       {"answer":"... wartet auf eine zeitweise nicht verfügbare Ressource.", "correct":true}
+      ]
+    },
+    { "question":"Um den Ort und die Länge freier Speicherblöcke zu verwalten, ...",
+      "notShuffle":true,
+      "answers":[
+       {"answer":"... kann das Loch selbst verwendet werden.", "correct":true},
+       {"answer":"... können Zeiger auf die Blöcke gespeichert werden."},
+       {"answer":"... macht es Sinn, die CPU in regelmäßigen Abständen zu warten. "},
+       {"answer":"Antwort 1 und 2. "}
+      ]
+    },
+    { "question":"Der Prozesskontrollblock (PCB) enthält ...",
+      "answers":[
+       {"answer":"... Speicherabbilder von Prozessen."},
+       {"answer":"... die Prozesstabelle."},
+       {"answer":"... Informationen zum Zustand eines Prozesses, der CPU-Register, geöffnete Geräte und Dateien", "correct":true},
+       {"answer":"Alle Antworten treffen zu."}
+      ]
+    },
+    { "question":"Welches Problem ergibt sich wenn in einem Mehrprozessorsystem ein Prozess von einer CPU auf eine andere wechselt?",
+      "answers":[
+       {"answer":"Der Kontext-Switch dauert länger aufgrund der Prozessoraffinität"},
+       {"answer":"Der Cache des zweiten Prozessors hat potenziell nicht zum Prozess passende Inhalte. Folgende Speicherzugriffe dauern länger. ", "correct":true},
+       {"answer":"Es gibt kein Problem. "}
+      ]
+    },
+    { "question":"Welcher Dateityp muss mindestens vom Betriebsystem unterstützt werden?",
+      "answers":[
+       {"answer":"Textdateien"},
+       {"answer":"ausführbare Dateien", "correct":true},
+       {"answer":"Systemdateien"},
+       {"answer":"Alle Antworten treffen zu."}
+      ]
+    },
+    { "question":" Der Dispatcher ... ",
+      "answers":[
+       {"answer":"... veranlasst die Ausführung eines ausgewählten Prozesses", "correct":true},
+       {"answer":"... setzt Prozesse in die I/O-Warteschlange"},
+       {"answer":"... ist immer klein und einfach"},
+       {"answer":"... verändert nie Prozess-Prioritäten"}
+      ]
+    }
+  ]
+}
