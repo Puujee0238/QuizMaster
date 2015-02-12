@@ -157,7 +157,7 @@ public class QuizFragment extends Fragment {
         if (arg1 >= 0) {
           Answer a = q.getAnswers().get(arg1);
           if (a.getCorrect() != null && a.getCorrect()) {
-            content.setBackgroundColor(getResources().getColor(R.color.green));
+            content.setBackgroundColor(getResources().getColor(R.color.dark_green));
           } else {
             content.setBackgroundColor(getResources().getColor(R.color.red));
           }
