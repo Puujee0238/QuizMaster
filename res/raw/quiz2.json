@@ -229,7 +229,7 @@
        {"answer":"... von Paging abzusehen. "},
        {"answer":"... hierarchisch zu pagen. "},
        {"answer":"... die Page-Tabelle selbst zu pagen."},
-       {"answer":"Antwort 2 und 3. "}
+       {"answer":"Antwort 2 und 3. ", "correct":true}
       ]
     },
     { "question":"Eine Speicheradresse, die von der CPU generiert wird besteht aus zwei Teilen:",
