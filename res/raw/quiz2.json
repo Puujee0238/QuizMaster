@@ -26,8 +26,8 @@
     },
     { "question":"Für einen Prozess sei die Sequenz seiner Page-Zugriffe 1 2 3 4 2 1 5 6 2 1 2 3 7 6 3 2 1 2 3 6. Für den LRU-Page-Replacement-Algorithmus mit vier Frames ist die Anzahl der Page-Faults:",
       "answers":[
-       {"answer":"10"},
-       {"answer":"14", "correct":true},
+       {"answer":"10", "correct":true},
+       {"answer":"14"},
        {"answer":"8"},
        {"answer":"11"}
       ]
@@ -124,9 +124,9 @@
       "notShuffle":true,
       "answers":[
        {"answer":"... dann heißt das Memory-Mapped I/O."},
-       {"answer":"... dann muss das der Kontroller unterstützen. ", "correct":true},
+       {"answer":"... dann muss das der Kontroller unterstützen. "},
        {"answer":"... kann der Zugriff auf die Geräte ohne Assembler-Befehle programmiert werden"},
-       {"answer":"Allem obigen. "},
+       {"answer":"Allem obigen. ", "correct":true},
        {"answer":"Etwas anderem. "}
       ]
     },
