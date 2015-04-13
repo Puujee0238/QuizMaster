@@ -66,7 +66,7 @@ public class QuizMainActivity extends MainNavigationActivity {
   public Fragment createQuizFragment(Integer quiz) {
     Bundle b = new Bundle();
     QuizList list = readQuizList(quiz);
-    b.putSerializable(QuizViewPagerFragment.ARG_ENITY, list);
+    b.putSerializable(QuizViewPagerFragment.ARG_ENTITY, list);
     Fragment frg = new QuizViewPagerFragment();
     frg.setArguments(b);
     return frg;

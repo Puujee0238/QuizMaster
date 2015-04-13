@@ -77,7 +77,10 @@ public class QuizViewPagerFragment extends EntityViewPagerFragment {
       return list.get(position).getQuestion();
     }
   }
-  
-  
+
+  @Override
+  protected void restoreInstance(Bundle values) {
+    //do nothing
+  }
   
 }
